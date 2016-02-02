@@ -97,7 +97,6 @@
 </fieldset>
 
 <script>
-  "use strict";
 
   var button = document.getElementById('popup-alert-button');
 
@@ -108,9 +107,6 @@
   button.addEventListener('click', alertBox);
 
 </script>
-
-
-
 
 
 <h3>Manipulating the DOM</h3>
@@ -124,7 +120,17 @@
 </fieldset>
 
 <script>
-  // code here for above-problem
+"use strict";
+
+var message = document.getElementById("message-to-change");
+var buttonGoodbye = document.getElementById("change-hello-to-goodbye-button");
+
+function changeMessage(){
+  message.innerText = "goodbye";
+}
+
+buttonGoodbye.addEventListener('click', changeMessage);
+
 </script>
 
 <div class="hint">
