@@ -120,16 +120,16 @@
 </fieldset>
 
 <script>
-"use strict";
+  "use strict";
 
-var message = document.getElementById("message-to-change");
-var buttonGoodbye = document.getElementById("change-hello-to-goodbye-button");
+  var message = document.getElementById("message-to-change");
+  var buttonGoodbye = document.getElementById("change-hello-to-goodbye-button");
 
-function changeMessage(){
-  message.innerText = "goodbye";
-}
+  function changeMessage(){
+    message.innerText = "goodbye";
+  }
 
-buttonGoodbye.addEventListener('click', changeMessage);
+  buttonGoodbye.addEventListener('click', changeMessage);
 
 </script>
 
@@ -159,7 +159,16 @@ buttonGoodbye.addEventListener('click', changeMessage);
 </fieldset>
 
 <script>
-  // code here for above problem
+
+  var submissionForm = document.getElementById("prevent-form-submission-form");
+
+  function preventSubmit(evt){
+    alert("No submission for you");
+    evt.preventDefault();
+  }
+
+  submissionForm.addEventListener('submit', preventSubmit);
+
 </script>
 
 <div class="hint">
@@ -189,22 +198,25 @@ buttonGoodbye.addEventListener('click', changeMessage);
 </fieldset>
 
 <script>
-//  Here's a stub of a function you can use!
+ // Here's a stub of a function you can use!
 
-//  function reverseString() {
-//    var msg = "Porcupines are cute";
-//
-//    // do some stuff here to reverse that string into a new variable
-//    var newMsg = "This should be the reversed string";
-//
-//    alert(newMsg);
-//  }
+ function reverseString() {
+  var msg = "Porcupines are cute";
+   // do some stuff here to reverse that string into a new variable
+  var newMsg = "";
+
+  for (var i = msg.length - 1; i >= 0; i--)
+    newMsg += msg[i];
+  
+  alert(newMsg);
+ }
 
 // Here's a stub of event stuff you could use
-//
 
-//  var button = document.getElementById('reverse-string-button');
-//  button.addEventListener('click', reverseString);
+
+ var button = document.getElementById('reverse-string-button');
+ button.addEventListener('click', reverseString);
+
 </script>
 
 
