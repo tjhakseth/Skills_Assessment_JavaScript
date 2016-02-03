@@ -98,8 +98,7 @@
     SELECT b.name,
            m.name,
            m.year,
-           b.discontinued,
-           (b.discontinued - m.year) AS years_until_brand_discontinued
+           b.discontinued
     FROM models AS m
       LEFT JOIN brands AS b
         ON m.brand_name = b.name
